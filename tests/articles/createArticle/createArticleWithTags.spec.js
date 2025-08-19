@@ -17,8 +17,9 @@ testParameters.forEach(({ tagsNumber, testNameEnding }) => {
       internalHomePage,
       createArticlePage,
       internalViewArticlePage,
+      factories
     }) => {
-      const article = factories.article.generateArticle(tagsNumber);
+      const article = factories.article.generateArticle({ tagsCount: tagsNumber });
 
       await internalHomePage.header.clickNewArticleLink();
       await createArticlePage.fillTitleField(article.title);

@@ -10,7 +10,7 @@ export const test = base.extend<{
     const factories = {
       user: new UserFactory(),
       userSettings: new UserSettingsFactory(),
-      article: new ArticleFactory,
+      article: new ArticleFactory(),
     };
 
     await use(factories);

@@ -25,6 +25,6 @@ export class ArticleFactory {
   }
 
   generateTags() {
-    return Array.from({ length: 3 }, () => faker.word.noun());
+    return Array.from({ length: count }, () => faker.word.noun());
   }
 }

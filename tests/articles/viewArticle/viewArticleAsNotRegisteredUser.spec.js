@@ -12,7 +12,7 @@ test.beforeEach(async ({ pages, users, factories }) => {
 
   article = factories.article.generateArticle();
 
-  await createArticle(pages[0], article, 1);
+  article.url = await createArticle(pages[0], article, 1);
 });
 
 test('View an article as not registered user', async ({
