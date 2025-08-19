@@ -24,7 +24,7 @@ export class ArticleFactory {
     return faker.lorem.paragraphs(3);
   }
 
-  generateTags() {
+  generateTags(count = 0) {
     return Array.from({ length: count }, () => faker.word.noun());
   }
 }
